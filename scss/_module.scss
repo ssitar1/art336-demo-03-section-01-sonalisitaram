@@ -14,6 +14,67 @@ Module Rules
     text-decoration: none;
 }
 
-nav[role="navigation"] {
+nav[role="navigation"] ul {
     list-style-type: none;
 }
+
+nav[role="navigation"] ul a {
+    border: 1px solid $color;
+    color: $color;
+    display: inline-block;
+    @include fontSize(16px);
+    @include headline-font;
+    margin-left: 8px;
+    padding: 0 4px;
+    text-decoration: none;
+    transition: border 400 ms linear;
+    transition: color 400 ms linear;
+}
+
+nav[role="navigation"] ul a :hover {
+    border: 1px solid lighten($color, 30%);
+    color: lighten($color, 30%);
+    transition: border 400 ms linear;
+    transition: color 400 ms linear;
+}
+
+heade[role="banner"] {
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    background-color: $color;
+    color: $background-color;
+    padding: 12px;
+}
+
+heade[role="banner"] h1 {
+    animation: colorchange-font 5s linear 1s infinite alternate;
+    color: $background-color;
+}
+
+heade[role="banner"] img {
+    border-radius: 50%;
+    width: 75%;
+}
+
+heade[role="banner"] p {
+    @include fontSize(23px);
+}
+
+heade[role="banner"] a {
+    color: $background-color;
+    @include body-font-italic;
+    transition: color 400ms linear;
+}
+
+heade[role="banner"] a:hover {
+    color: darken($background-color, 12%);
+    transition: color 400 ms linear;
+}
+
+
+
+
+
+
+    
+    
+    
